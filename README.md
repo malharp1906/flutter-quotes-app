@@ -1,16 +1,53 @@
-# quotesapp
+# Quotes App
 
-A new Flutter project.
+A small Flutter app that fetches a random inspirational quote from a public REST API each time you tap a button.
 
-## Getting Started
+![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-This project is a starting point for a Flutter application.
+<!-- Add a screenshot here: ![screenshot](docs/screenshot.png) -->
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Tap **Get Quote** to load a new random quote and its author
+- Loading spinner while the request is in flight, with a 10-second timeout
+- Friendly error message if the request fails
+- Gradient background, fade-in animation and Google Fonts typography (Playfair Display and Poppins)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech
+
+- **Flutter / Dart**
+- [`http`](https://pub.dev/packages/http) for the REST call
+- [`google_fonts`](https://pub.dev/packages/google_fonts)
+
+## Run it
+
+Requires the [Flutter SDK](https://docs.flutter.dev/get-started/install).
+
+```bash
+git clone https://github.com/malharp1906/flutter-quotes-app
+cd flutter-quotes-app
+flutter pub get
+flutter run
+```
+
+## Project structure
+
+```
+lib/
+├── main.dart              # App entry point
+└── screens/
+    └── home_screen.dart   # UI and the API call
+```
+
+## Ideas for next steps
+
+- [ ] Dark mode
+- [ ] Share / copy a quote
+- [ ] Move the API call into its own service class and add tests
+- [ ] Favourite quotes saved on the device
+
+## License
+
+[MIT](LICENSE)
